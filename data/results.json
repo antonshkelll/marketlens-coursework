@@ -1,0 +1,109 @@
+{
+  "seed": 13112026,
+  "train_end": "2026-10-11T00:00:00Z",
+  "test_start": "2026-10-21T00:00:00Z",
+  "test_end": "2026-10-31T00:00:00Z",
+  "selected_min_pair": 1,
+  "validation": {
+    "1": {
+      "precision_at_10": 0.05562310030395137,
+      "recall_at_10": 0.1618420417812515,
+      "coverage": 1.0,
+      "eligible_users": 329,
+      "population": 360,
+      "catalog_size": 120
+    },
+    "3": {
+      "precision_at_10": 0.04954407294832827,
+      "recall_at_10": 0.14628383268200898,
+      "coverage": 0.9333333333333333,
+      "eligible_users": 329,
+      "population": 360,
+      "catalog_size": 120
+    },
+    "5": {
+      "precision_at_10": 0.04832826747720365,
+      "recall_at_10": 0.141156462585034,
+      "coverage": 0.5833333333333334,
+      "eligible_users": 329,
+      "population": 360,
+      "catalog_size": 120
+    }
+  },
+  "test": {
+    "popularity": {
+      "precision_at_10": 0.03573573573573574,
+      "recall_at_10": 0.10724057390724057,
+      "coverage": 0.175,
+      "eligible_users": 333,
+      "population": 360,
+      "catalog_size": 120
+    },
+    "cooccurrence": {
+      "precision_at_10": 0.042942942942942944,
+      "recall_at_10": 0.13755779589112924,
+      "coverage": 1.0,
+      "eligible_users": 333,
+      "population": 360,
+      "catalog_size": 120
+    }
+  },
+  "benchmark": {
+    "query": "SELECT COUNT(*) FROM event WHERE session_id=? AND occurred_at>=?",
+    "parameters": [
+      200,
+      1788220800
+    ],
+    "before_ms": 1.8121,
+    "after_ms": 0.0457,
+    "speedup": 39.652078774617074,
+    "repeats": 31,
+    "warmups": 3,
+    "answer": 4,
+    "before_plan": [
+      [
+        3,
+        0,
+        216,
+        "SCAN event"
+      ]
+    ],
+    "after_plan": [
+      [
+        3,
+        0,
+        47,
+        "SEARCH event USING COVERING INDEX event_session_time (session_id=? AND occurred_at>?)"
+      ]
+    ]
+  },
+  "environment": {
+    "python": "3.12.14",
+    "sqlite": "3.53.1",
+    "system": "Windows-10-10.0.19045-SP0"
+  },
+  "synthetic": true,
+  "split_audit": {
+    "train_max": 1792523700,
+    "test_min": 1792556100,
+    "cutoff": 1792540800,
+    "overlap": 0
+  },
+  "counts": {
+    "app_user": 360,
+    "product": 120,
+    "offer": 360,
+    "customer_order": 9182,
+    "order_item": 21423,
+    "user_session": 9297,
+    "event": 49162
+  },
+  "funnel": {
+    "views": 27739,
+    "carts": 21423,
+    "orders": 15195,
+    "conversion": 0.5477847074516025
+  },
+  "repeat_share": 1.0,
+  "database_sha256": "ab8135f1e64e81ee771dd467ad9b4f90821a636bf6e953838b99a5a96822521a"
+}

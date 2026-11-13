@@ -1,0 +1,92 @@
+{
+  "source_url": "https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset",
+  "download_url": "https://www.kaggle.com/api/v1/datasets/download/retailrocket/ecommerce-dataset/events.csv",
+  "accessed": "13.11.2026",
+  "license": "CC BY-NC-SA 4.0",
+  "raw_archive_sha256": "b605e916a9379585d4a0a3f3c76abe7e5be4ed178b73d969e89061a2340ae191",
+  "raw_rows": 2756101,
+  "raw_min_ms": 1430622004384,
+  "raw_max_ms": 1442545187788,
+  "precutoff_eligible": 137654,
+  "users": 50000,
+  "sample_rule": "At least 3 events before 2015-08-01 UTC; smallest 50000 SHA256(13112026:visitorid). No future activity used.",
+  "events": 354863,
+  "items": 69354,
+  "event_types": {
+    "addtocart": 15058,
+    "transaction": 5407,
+    "view": 334398
+  },
+  "valid_cutoff": 1438387200000,
+  "test_cutoff": 1440460800000,
+  "test_end": 1442620800000,
+  "validation": {
+    "1": {
+      "precision_at_10": 0.0037735849056603774,
+      "recall_at_10": 0.02830188679245283,
+      "coverage": 0.008794446891565532,
+      "eligible_users": 53,
+      "population": 50000,
+      "catalog_size": 65837,
+      "covered_items": 579,
+      "cold_start_users": 47155
+    },
+    "3": {
+      "precision_at_10": 0.0056603773584905665,
+      "recall_at_10": 0.028840970350404314,
+      "coverage": 0.00027340249403830675,
+      "eligible_users": 53,
+      "population": 50000,
+      "catalog_size": 65837,
+      "covered_items": 18,
+      "cold_start_users": 47155
+    },
+    "5": {
+      "precision_at_10": 0.0056603773584905665,
+      "recall_at_10": 0.028840970350404314,
+      "coverage": 0.00019745735680544376,
+      "eligible_users": 53,
+      "population": 50000,
+      "catalog_size": 65837,
+      "covered_items": 13,
+      "cold_start_users": 47155
+    }
+  },
+  "selected_min_pair": 3,
+  "test": {
+    "popularity": {
+      "precision_at_10": 0.0032258064516129032,
+      "recall_at_10": 0.01075268817204301,
+      "coverage": 0.00020723854636962475,
+      "eligible_users": 31,
+      "population": 50000,
+      "catalog_size": 67555,
+      "covered_items": 14,
+      "cold_start_users": 47117
+    },
+    "cooccurrence": {
+      "precision_at_10": 0.0032258064516129032,
+      "recall_at_10": 0.01075268817204301,
+      "coverage": 0.00028125231293020503,
+      "eligible_users": 31,
+      "population": 50000,
+      "catalog_size": 67555,
+      "covered_items": 19,
+      "cold_start_users": 47117
+    }
+  },
+  "synthetic": false,
+  "catalog_rule": "Items observed in selected cohort before prediction cutoff; actual sellability unknown.",
+  "limitations": [
+    "Cohort overrepresents pre-cutoff active visitors.",
+    "Price, quantity, seller, readable item names and exposure logs are not inferred.",
+    "Identifiers are visitors, not verified persons; timestamps are historical 2015.",
+    "Metrics apply only to users with novel purchases of pre-cutoff-known items."
+  ],
+  "diagnostics": {
+    "test_visitors": 1755,
+    "test_purchasers": 36,
+    "test_transaction_rows": 92,
+    "training_purchasers": 2883
+  }
+}

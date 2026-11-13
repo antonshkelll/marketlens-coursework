@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+data/*.sqlite*
+data/raw/
+data/cohort_ids.csv
+research/_*.py
+research/pdf_contents.json
+research/qa/
+*.log
+*.zip

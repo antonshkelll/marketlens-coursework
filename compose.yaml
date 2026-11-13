@@ -1,0 +1,17 @@
+services:
+  marketlens:
+    build: .
+    restart: unless-stopped
+    init: true
+    ports:
+      - '127.0.0.1:8000:8000'
+    volumes:
+      - marketlens-data:/app/data
+    mem_limit: 512m
+    cpus: 1.0
+    logging:
+      options:
+        max-size: '10m'
+        max-file: '3'
+volumes:
+  marketlens-data:
