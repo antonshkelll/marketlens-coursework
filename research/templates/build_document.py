@@ -147,7 +147,7 @@ for section in data['sections']:
    ('Обоснованная оптимизация','Сохранён результат запросов','Сравнение результатов и медианного времени')],[4.3,6.1,6.6])
 head('СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ',centered=True)
 for i,s in enumerate(data['references'],1):
- q=p(f'{i}. {s}');q.paragraph_format.first_line_indent=0;q.paragraph_format.space_after=Pt(6)
+ q=p(f'{i}. {s}');q.paragraph_format.first_line_indent=0;q.paragraph_format.space_after=Pt(0)
 head('ПРИЛОЖЕНИЯ',centered=True)
 head('ПРИЛОЖЕНИЕ А',centered=True)
 center('Связи и дополнительные ограничения логической модели',True)

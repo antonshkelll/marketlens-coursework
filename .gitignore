@@ -10,3 +10,5 @@ research/pdf_contents.json
 research/qa/
 *.log
 *.zip
+
+research/*_предпросмотр.pdf

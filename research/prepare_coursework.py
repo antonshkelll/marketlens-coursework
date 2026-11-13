@@ -80,5 +80,7 @@ d['conclusion']=[
 'Практическое применение результата — обучение проектированию БД и проверке рекомендаций на явно заданных данных. Дальнейшее развитие связано с использованием событий просмотра для холодного старта, расширением аналитических фильтров и испытанием серверной установки. Эти направления требуют отдельного эксперимента и не подменяют результаты выполненной работы.'
 ]
 d['data_source']='Retailrocket. Retailrocket recommender system dataset: events.csv. — Kaggle, версия 2. — URL: https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset (дата обращения: 13.11.2026). — Лицензия: CC BY-NC-SA 4.0. Источник данных, отдельно от научной литературы.'
+from editorial import revise
+d=revise(d)
 (BASE/'content.json').write_text(json.dumps(d,ensure_ascii=False,indent=2),encoding='utf-8')
 print('Prepared complete text; measured numbers loaded from JSON')
