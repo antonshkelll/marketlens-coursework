@@ -1,3 +1,7 @@
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/portfolio-dark.svg"><img src="assets/portfolio-light.svg" width="100%" alt="marketlens-coursework"></picture>
+
+[Профиль](https://github.com/antonshkelll) · [Портфолио](https://antonshkel.ru)
+
 # MarketLens
 
 **Учебный маркетплейс с объяснимыми рекомендациями и воспроизводимым экспериментом.**
